@@ -118,6 +118,11 @@
 @media(prefers-reduced-motion:reduce){#mdj .time-side,#mdj .time-arrow{opacity:1}#mdj .time-impact.is-animated .time-side,#mdj .time-impact.is-animated .time-arrow,#mdj .time-impact.is-animated .time-after .hours{animation:none}}
 #mdj .outputs{padding-top:48px;padding-bottom:48px}#mdj .outputs .heading{margin-bottom:28px}
 #mdj .faq details{padding:26px 8px;cursor:default}#mdj .faq details>summary{list-style:none;cursor:default;pointer-events:none;font-size:18px;font-weight:800}#mdj .faq details>summary::-webkit-details-marker{display:none}#mdj .faq details>summary::before{content:"Q";display:inline-grid;place-items:center;width:30px;height:30px;margin-right:12px;border-radius:50%;background:var(--赤);color:#fff;font-size:13px;vertical-align:middle}#mdj .faq details>p,#mdj .faq details:not([open])>p{position:relative;display:block;margin:16px 0 0;padding-left:42px;color:#666;line-height:1.9}#mdj .faq details>p::before{content:"A";position:absolute;left:0;top:1px;display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--赤);border-radius:50%;background:#fff;color:var(--赤);font-size:13px;font-weight:900;line-height:1}
+#mdj .menu-toggle{display:none;width:46px;height:46px;padding:0;border:0;border-radius:50%;background:#333;cursor:pointer;position:relative;z-index:102}#mdj .menu-toggle span{position:absolute;left:13px;width:20px;height:2px;border-radius:2px;background:#fff;transition:transform .25s ease,top .25s ease,opacity .2s ease}#mdj .menu-toggle span:nth-child(1){top:15px}#mdj .menu-toggle span:nth-child(2){top:22px}#mdj .menu-toggle span:nth-child(3){top:29px}#mdj .menu-toggle[aria-expanded="true"] span:nth-child(1){top:22px;transform:rotate(45deg)}#mdj .menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}#mdj .menu-toggle[aria-expanded="true"] span:nth-child(3){top:22px;transform:rotate(-45deg)}
+@media(max-width:767px){#mdj header{overflow:visible}#mdj .menu-toggle{display:block}#mdj header nav{position:absolute;top:68px;left:0;right:0;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:12px 16px 22px;background:#fff;border-top:1px solid var(--線);box-shadow:0 18px 35px rgba(30,30,30,.14);opacity:0;visibility:hidden;transform:translateY(-10px);pointer-events:none;transition:opacity .25s ease,transform .25s ease,visibility .25s ease}#mdj header nav.is-open{opacity:1;visibility:visible;transform:none;pointer-events:auto}#mdj header nav>a,#mdj header nav>a:not(.contact):not(.request){display:block;padding:15px 8px;border-bottom:1px solid var(--線);font-size:15px;color:var(--文字)}#mdj header nav .contact,#mdj header nav .request{display:block;margin-top:12px;padding:14px 18px;border:0;text-align:center;color:#fff}#mdj header nav .request{margin-top:8px}body.menu-open{overflow:hidden}}
+@media(prefers-reduced-motion:reduce){#mdj .menu-toggle span,#mdj header nav{transition:none}}
+#mdj .final{position:relative;padding:48px 0;overflow:hidden;background:#bd2630}#mdj .final::before{content:"";position:absolute;right:-110px;top:-160px;width:420px;height:420px;border:1px solid rgba(255,255,255,.16);border-radius:50%}#mdj .final::after{content:"";position:absolute;right:80px;bottom:-230px;width:340px;height:340px;border:70px solid rgba(255,255,255,.055);border-radius:50%}#mdj .final-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:52px;align-items:center}#mdj .final-copy{padding-right:24px}#mdj .final-kicker{display:inline-flex;align-items:center;gap:9px;margin:0 0 12px;color:#fff;font-size:13px;font-weight:800;letter-spacing:.06em}#mdj .final-kicker::before{content:"";width:24px;height:2px;background:#fff}#mdj .final h2{margin:0;font-size:clamp(34px,3.5vw,49px);line-height:1.42;letter-spacing:-.045em}#mdj .final-copy>p:last-child{margin:18px 0 0;max-width:680px;color:#fff;font-size:15px;line-height:1.8}#mdj .final-actions{display:grid;grid-template-columns:1fr;gap:12px;padding:22px;border:1px solid rgba(255,255,255,.34);border-radius:20px;background:rgba(125,14,24,.28);box-shadow:0 18px 45px rgba(83,8,15,.22);backdrop-filter:blur(6px)}#mdj .final-actions::before{content:"まずはお気軽に";color:#fff;font-size:13px;font-weight:800;text-align:center;letter-spacing:.08em}#mdj .final-actions a{position:relative;display:flex;align-items:center;justify-content:space-between;min-height:62px;padding:16px 22px;font-size:16px}#mdj .final-actions a::after{content:"→";display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#f7e2e4;color:var(--赤);transition:transform .25s ease}#mdj .final-actions a:last-child::after{background:#fff;color:#333}#mdj .final-actions a:hover::after{transform:translateX(4px)}
+@media(max-width:767px){#mdj .final{padding:38px 0}#mdj .final-grid{grid-template-columns:1fr;gap:26px}#mdj .final-copy{padding-right:0}#mdj .final h2{font-size:30px;line-height:1.5}#mdj .final-copy>p:last-child{font-size:14px}#mdj .final-actions{margin-top:0;padding:16px}#mdj .final-actions a{min-height:58px}}
 </style>
 </head>
 <body>
@@ -128,7 +133,8 @@
 <img src="material-digital-logo.png" alt="マテリアルデジタル">
 </span>
 </a>
-<nav aria-label="ページ内ナビゲーション">
+<button class="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="global-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav id="global-menu" aria-label="ページ内ナビゲーション">
 <a href="#service">サービス概要</a>
 <a href="#strength">特長</a>
 <a href="#deliverables">ご支援内容</a>
@@ -363,7 +369,7 @@
 <div class="media-sources" aria-label="分析対象となる接点">
 <div class="media-source"><span class="media-stage">認知</span><span class="media-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="6" y="7" width="28" height="26" rx="2"/><path d="M12 13h10M12 18h16M12 23h8M24 23h4M12 28h16"/></svg></span>広報・記事<small>メディア露出と話題</small>
 </div>
-<div class="media-source"><span class="media-stage">興味・反応</span><span class="media-icon social-icons" aria-hidden="true"><img class="social-logo" src="x.svg" alt=""><img class="social-logo" src="instagram.svg" alt=""><img class="social-logo youtube" src="youtube.svg" alt=""><img class="social-logo tiktok" src="tiktok.svg" alt=""></span>ソーシャルメディア<small>X・IG・YouTube・TikTokなど</small>
+<div class="media-source"><span class="media-stage">興味・反応</span><span class="media-icon social-icons" aria-hidden="true"><img class="social-logo" src="assets/social-logos/x.svg" alt=""><img class="social-logo" src="assets/social-logos/instagram.svg" alt=""><img class="social-logo youtube" src="assets/social-logos/youtube.svg" alt=""><img class="social-logo tiktok" src="assets/social-logos/tiktok.svg" alt=""></span>ソーシャルメディア<small>X・IG・YouTube・TikTokなど</small>
 </div>
 <div class="media-source"><span class="media-stage">視聴・理解</span><span class="media-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="5" y="9" width="30" height="22" rx="3"/><path d="m17 15 9 5-9 5z"/></svg></span>動画・発信<small>視聴と離脱</small>
 </div>
@@ -609,7 +615,8 @@
 </section>
 <section class="final" id="contact">
 <div class="inner final-grid">
-<div>
+<div class="final-copy">
+<p class="final-kicker">分析から次の一手まで、ご相談ください</p>
 <h2>打ち手不足はもう終わり。<br>成果につながる分析と、<br>次の一手をAIでスマートに。</h2>
 <p>「今の施策をまずは分析したい」「サンプルを見てみたい」など、お気軽にお問い合わせください。</p>
 </div>
@@ -667,6 +674,26 @@
 (() => {
   const root = document.querySelector('#mdj');
   root?.classList.add('motion-ready');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const globalMenu = document.querySelector('#global-menu');
+  if (menuToggle && globalMenu) {
+    const closeMenu = () => {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'メニューを開く');
+      globalMenu.classList.remove('is-open');
+      document.body.classList.remove('menu-open');
+    };
+    menuToggle.addEventListener('click', () => {
+      const willOpen = menuToggle.getAttribute('aria-expanded') !== 'true';
+      menuToggle.setAttribute('aria-expanded', String(willOpen));
+      menuToggle.setAttribute('aria-label', willOpen ? 'メニューを閉じる' : 'メニューを開く');
+      globalMenu.classList.toggle('is-open', willOpen);
+      document.body.classList.toggle('menu-open', willOpen);
+    });
+    globalMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+    window.addEventListener('resize', () => { if (window.innerWidth > 767) closeMenu(); });
+  }
   document.querySelectorAll('.faq details').forEach(item => { item.open = true; });
   const counters = document.querySelectorAll('.count-up');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
