@@ -123,6 +123,8 @@
 @media(prefers-reduced-motion:reduce){#mdj .menu-toggle span,#mdj header nav{transition:none}}
 #mdj .final{position:relative;padding:48px 0;overflow:hidden;background:#bd2630}#mdj .final::before{content:"";position:absolute;right:-110px;top:-160px;width:420px;height:420px;border:1px solid rgba(255,255,255,.16);border-radius:50%}#mdj .final::after{content:"";position:absolute;right:80px;bottom:-230px;width:340px;height:340px;border:70px solid rgba(255,255,255,.055);border-radius:50%}#mdj .final-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:52px;align-items:center}#mdj .final-copy{padding-right:24px}#mdj .final-kicker{display:inline-flex;align-items:center;gap:9px;margin:0 0 12px;color:#fff;font-size:13px;font-weight:800;letter-spacing:.06em}#mdj .final-kicker::before{content:"";width:24px;height:2px;background:#fff}#mdj .final h2{margin:0;font-size:clamp(34px,3.5vw,49px);line-height:1.42;letter-spacing:-.045em}#mdj .final-copy>p:last-child{margin:18px 0 0;max-width:680px;color:#fff;font-size:15px;line-height:1.8}#mdj .final-actions{display:grid;grid-template-columns:1fr;gap:12px;padding:22px;border:1px solid rgba(255,255,255,.34);border-radius:20px;background:rgba(125,14,24,.28);box-shadow:0 18px 45px rgba(83,8,15,.22);backdrop-filter:blur(6px)}#mdj .final-actions::before{content:"まずはお気軽に";color:#fff;font-size:13px;font-weight:800;text-align:center;letter-spacing:.08em}#mdj .final-actions a{position:relative;display:flex;align-items:center;justify-content:space-between;min-height:62px;padding:16px 22px;font-size:16px}#mdj .final-actions a::after{content:"→";display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#f7e2e4;color:var(--赤);transition:transform .25s ease}#mdj .final-actions a:last-child::after{background:#fff;color:#333}#mdj .final-actions a:hover::after{transform:translateX(4px)}
 @media(max-width:767px){#mdj .final{padding:38px 0}#mdj .final-grid{grid-template-columns:1fr;gap:26px}#mdj .final-copy{padding-right:0}#mdj .final h2{font-size:30px;line-height:1.5}#mdj .final-copy>p:last-child{font-size:14px}#mdj .final-actions{margin-top:0;padding:16px}#mdj .final-actions a{min-height:58px}}
+#mdj .mid-cta{padding:32px 0;background:#fff}#mdj .mid-cta-box{position:relative;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;padding:30px 36px;overflow:hidden;border-radius:18px;background:#fff4f5;border:1px solid #efd1d4}#mdj .mid-cta-box::after{content:"";position:absolute;right:-55px;top:-80px;width:210px;height:210px;border:42px solid rgba(201,19,40,.06);border-radius:50%}#mdj .mid-cta-copy{position:relative;z-index:1}#mdj .mid-cta-label{display:block;margin-bottom:7px;color:var(--赤);font-size:12px;font-weight:900;letter-spacing:.08em}#mdj .mid-cta-copy strong{display:block;color:var(--文字);font-size:23px;line-height:1.5}#mdj .mid-cta-copy p{margin:7px 0 0;color:#666;font-size:14px;line-height:1.75}#mdj .mid-cta-actions{position:relative;z-index:1;display:flex;gap:10px}#mdj .mid-cta-actions a{display:flex;align-items:center;justify-content:center;min-width:140px;min-height:54px;padding:13px 22px;border-radius:999px;font-size:14px;font-weight:800;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease}#mdj .mid-cta-actions .mid-request{border:1px solid var(--赤);background:#fff;color:var(--赤)}#mdj .mid-cta-actions .mid-contact{background:var(--赤);color:#fff}#mdj .mid-cta-actions a:hover{transform:translateY(-2px);box-shadow:0 9px 20px rgba(120,15,25,.16)}#mdj .mid-cta-actions .mid-request:hover{background:#fffafa;color:var(--濃赤)}#mdj .mid-cta-actions .mid-contact:hover{background:var(--濃赤)}
+@media(max-width:767px){#mdj .mid-cta{padding:24px 0}#mdj .mid-cta-box{grid-template-columns:1fr;gap:20px;padding:26px 22px}#mdj .mid-cta-copy strong{font-size:20px}#mdj .mid-cta-actions{display:grid;grid-template-columns:1fr 1fr}#mdj .mid-cta-actions a{min-width:0;padding:12px 14px}}
 </style>
 </head>
 <body>
@@ -369,7 +371,7 @@
 <div class="media-sources" aria-label="分析対象となる接点">
 <div class="media-source"><span class="media-stage">認知</span><span class="media-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="6" y="7" width="28" height="26" rx="2"/><path d="M12 13h10M12 18h16M12 23h8M24 23h4M12 28h16"/></svg></span>広報・記事<small>メディア露出と話題</small>
 </div>
-<div class="media-source"><span class="media-stage">興味・反応</span><span class="media-icon social-icons" aria-hidden="true"><img class="social-logo" src="assets/social-logos/x.svg" alt=""><img class="social-logo" src="assets/social-logos/instagram.svg" alt=""><img class="social-logo youtube" src="assets/social-logos/youtube.svg" alt=""><img class="social-logo tiktok" src="assets/social-logos/tiktok.svg" alt=""></span>ソーシャルメディア<small>X・IG・YouTube・TikTokなど</small>
+<div class="media-source"><span class="media-stage">興味・反応</span><span class="media-icon social-icons" aria-hidden="true"><img class="social-logo" src="x.svg" alt=""><img class="social-logo" src="instagram.svg" alt=""><img class="social-logo youtube" src="youtube.svg" alt=""><img class="social-logo tiktok" src="tiktok.svg" alt=""></span>ソーシャルメディア<small>X・IG・YouTube・TikTokなど</small>
 </div>
 <div class="media-source"><span class="media-stage">視聴・理解</span><span class="media-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="5" y="9" width="30" height="22" rx="3"/><path d="m17 15 9 5-9 5z"/></svg></span>動画・発信<small>視聴と離脱</small>
 </div>
@@ -391,6 +393,19 @@
 </div>
 </div>
 </section>
+<aside class="mid-cta" aria-label="資料請求・無料相談">
+<div class="inner mid-cta-box">
+<div class="mid-cta-copy">
+<span class="mid-cta-label">まずは現在の施策から</span>
+<strong>何が届き、どこで止まったのか。<br>分析サンプルと一緒にご説明します。</strong>
+<p>今あるデータや施策資料だけでも、お気軽にご相談いただけます。</p>
+</div>
+<div class="mid-cta-actions">
+<a class="mid-request" href="#contact">資料請求</a>
+<a class="mid-contact" href="#contact">無料相談</a>
+</div>
+</div>
+</aside>
 <section class="future">
 <div class="inner">
 <div class="heading">
