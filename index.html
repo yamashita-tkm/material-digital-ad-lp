@@ -125,6 +125,10 @@
 @media(max-width:767px){#mdj .final{padding:38px 0}#mdj .final-grid{grid-template-columns:1fr;gap:26px}#mdj .final-copy{padding-right:0}#mdj .final h2{font-size:30px;line-height:1.5}#mdj .final-copy>p:last-child{font-size:14px}#mdj .final-actions{margin-top:0;padding:16px}#mdj .final-actions a{min-height:58px}}
 #mdj .mid-cta{padding:32px 0;background:#fff}#mdj .mid-cta-box{position:relative;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;padding:30px 36px;overflow:hidden;border-radius:18px;background:#fff4f5;border:1px solid #efd1d4}#mdj .mid-cta-box::after{content:"";position:absolute;right:-55px;top:-80px;width:210px;height:210px;border:42px solid rgba(201,19,40,.06);border-radius:50%}#mdj .mid-cta-copy{position:relative;z-index:1}#mdj .mid-cta-label{display:block;margin-bottom:7px;color:var(--赤);font-size:12px;font-weight:900;letter-spacing:.08em}#mdj .mid-cta-copy strong{display:block;color:var(--文字);font-size:23px;line-height:1.5}#mdj .mid-cta-copy p{margin:7px 0 0;color:#666;font-size:14px;line-height:1.75}#mdj .mid-cta-actions{position:relative;z-index:1;display:flex;gap:10px}#mdj .mid-cta-actions a{display:flex;align-items:center;justify-content:center;min-width:140px;min-height:54px;padding:13px 22px;border-radius:999px;font-size:14px;font-weight:800;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease}#mdj .mid-cta-actions .mid-request{border:1px solid var(--赤);background:#fff;color:var(--赤)}#mdj .mid-cta-actions .mid-contact{background:var(--赤);color:#fff}#mdj .mid-cta-actions a:hover{transform:translateY(-2px);box-shadow:0 9px 20px rgba(120,15,25,.16)}#mdj .mid-cta-actions .mid-request:hover{background:#fffafa;color:var(--濃赤)}#mdj .mid-cta-actions .mid-contact:hover{background:var(--濃赤)}
 @media(max-width:767px){#mdj .mid-cta{padding:24px 0}#mdj .mid-cta-box{grid-template-columns:1fr;gap:20px;padding:26px 22px}#mdj .mid-cta-copy strong{font-size:20px}#mdj .mid-cta-actions{display:grid;grid-template-columns:1fr 1fr}#mdj .mid-cta-actions a{min-width:0;padding:12px 14px}}
+#mdj .media-funnel-shell,#mdj .horizontal-scroll-shell,#mdj .case-carousel{position:relative}#mdj .swipe-guide{display:none}
+@media(max-width:767px){#mdj .media-funnel-shell{isolation:isolate;margin-top:34px}#mdj .media-funnel-shell::before{content:"";position:absolute;z-index:-1;inset:0 10px 0;background:linear-gradient(180deg,rgba(201,19,40,.13),rgba(201,19,40,.035));clip-path:polygon(0 0,100% 0,63% 100%,37% 100%);border-radius:18px}#mdj .media-funnel-shell .media-sources{margin-top:0}#mdj .media-funnel-shell .media-sources::after{display:none}#mdj .swipe-guide{position:absolute;z-index:20;right:14px;bottom:14px;display:flex;align-items:center;gap:7px;padding:8px 12px;border:1px solid rgba(51,51,51,.11);border-radius:999px;background:rgba(255,255,255,.86);box-shadow:0 7px 20px rgba(30,30,30,.08);color:#555;font-size:11px;font-weight:800;letter-spacing:.02em;pointer-events:none;opacity:.72;transition:opacity .35s ease,visibility .35s ease}#mdj .swipe-guide::before{content:"☝";display:block;font-size:19px;line-height:1;transform:rotate(90deg);animation:swipeFinger 1.45s ease-in-out infinite}#mdj .swipe-host.has-interacted>.swipe-guide{opacity:0;visibility:hidden}#mdj .horizontal-scroll-shell{margin-top:28px}#mdj .horizontal-scroll-shell>.service-compare-wrap,#mdj .horizontal-scroll-shell>.compare-wrap{margin-top:0}#mdj .case-carousel>.swipe-guide{bottom:58px}}
+@keyframes swipeFinger{0%,100%{transform:translateX(0) rotate(90deg)}50%{transform:translateX(-22px) rotate(90deg)}}
+@media(prefers-reduced-motion:reduce){#mdj .swipe-guide::before{animation:none}}
 </style>
 </head>
 <body>
@@ -247,7 +251,7 @@
 <h2>集めて、見極めて、つくる。<br>3ステップで生まれた改善実績。</h2>
 <p>消費者向け商材・サービスを対象に、生活者の声から次に検証する表現まで具体化したご支援例です。</p>
 </div>
-<div class="case-carousel" aria-roledescription="カルーセル">
+<div class="case-carousel swipe-host" aria-roledescription="カルーセル">
 <div class="case-viewport" tabindex="0" aria-label="業種別のご支援事例">
 <div class="case-track">
 <article class="case-card">
@@ -292,6 +296,7 @@
 </article>
 </div>
 </div>
+<span class="swipe-guide" aria-hidden="true">横にスワイプ</span>
 <div class="case-controls">
 <span class="case-status"><b>1</b> / 5</span>
 <span class="case-swipe-note">横にスワイプしてご覧いただけます</span>
@@ -368,6 +373,7 @@
 <img src="analysis-to-creative-visual.png" width="1536" height="864" alt="複数のメディアから集めた消費者の反応を分析し、次の企画や制作物へつなげる様子">
 <figcaption>複数の接点を横断し、反応と成果のつながりを分析</figcaption>
 </figure>
+<div class="media-funnel-shell swipe-host">
 <div class="media-sources" aria-label="分析対象となる接点">
 <div class="media-source"><span class="media-stage">認知</span><span class="media-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="6" y="7" width="28" height="26" rx="2"/><path d="M12 13h10M12 18h16M12 23h8M24 23h4M12 28h16"/></svg></span>広報・記事<small>メディア露出と話題</small>
 </div>
@@ -379,6 +385,8 @@
 </div>
 <div class="media-source"><span class="media-stage">訪問・購入</span><span class="media-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="5" y="7" width="30" height="26" rx="2"/><path d="M5 13h30M10 10h1M15 10h1M10 18h10M10 23h20M10 28h13"/></svg></span>サイト・販売<small>EC・ブランドサイト</small>
 </div>
+</div>
+<span class="swipe-guide" aria-hidden="true">横にスワイプ</span>
 </div>
 <div class="media-result">
 <strong class="media-core">施策の理由をつなぎ直し、<br>次の判断へ。</strong>
@@ -488,6 +496,7 @@
 <h2 id="service-compare-title">施策を実行するだけでなく、<br>成果の理由から次の一手までつなぐ。</h2>
 <p>個別の施策支援では分かれやすい「収集・分析・制作」を、ひとつの改善サイクルとしてご支援します。</p>
 </div>
+<div class="horizontal-scroll-shell swipe-host">
 <div class="service-compare-wrap">
 <table class="service-compare-table">
 <thead><tr><th scope="col">支援内容</th><th scope="col">広告代理店</th><th scope="col">インフルエンサー会社</th><th scope="col">一般的な広報支援会社</th><th scope="col">本サービス</th></tr></thead>
@@ -501,6 +510,8 @@
 </tbody>
 </table>
 </div>
+<span class="swipe-guide" aria-hidden="true">横にスワイプ</span>
+</div>
 <p class="compare-caption">※一般的なサービス傾向を整理した比較です。実際の対応範囲は各社・契約内容によって異なります。</p>
 <div class="why-material"><div><span class="why-material-label">なぜ、ここまでできるのか？</span><h3>領域をまたぐ知見が、<br>1つのチームにあるから。</h3></div><p><strong>マテリアルグループは、広報・PR、インフルエンサー施策、デジタルマーケティングを支援する総合マーケティングカンパニーです。</strong><br>各領域で培った知見を横断し、反応の収集や分析だけで終わらず、次の訴求設計・企画・制作・実行までを一気通貫でご支援します。</p></div>
 </div>
@@ -509,7 +520,7 @@
 <div class="inner">
 <div class="heading">
 <div class="jp">プランと料金</div>
-<h2>月額20万円から。<br>必要な制作量に合わせて広げられます。</h2>
+<h2>月額20万円から。<br>必要な分析・制作量に合わせてお試し頂けます。</h2>
 <p>初期設計・継続分析・制作点数を組み合わせる、分かりやすい料金体系です。</p>
 </div>
 <div class="price-formula">
@@ -547,6 +558,7 @@
 </div>
 </article>
 </div>
+<div class="horizontal-scroll-shell swipe-host">
 <div class="compare-wrap">
 <h3 class="compare-title">プラン別の対応内容</h3>
 <table class="plan-compare">
@@ -561,6 +573,8 @@
 <tr class="plan-contact-row"><th scope="row">ご相談・お申し込み</th><td><a class="plan-contact" href="#contact">無料相談</a></td><td><a class="plan-contact primary" href="#contact">無料相談</a></td><td><a class="plan-contact" href="#contact">無料相談</a></td></tr>
 </tbody>
 </table>
+</div>
+<span class="swipe-guide" aria-hidden="true">横にスワイプ</span>
 </div>
 <div class="option-box">
 <h3>制作メニュー・追加オプション</h3>
@@ -801,6 +815,16 @@
       mediaObserver.observe(mediaFunnel);
     }
   }
+
+  document.querySelectorAll('.swipe-host').forEach(host => {
+    const scroller = host.querySelector('.media-sources, .case-viewport, .service-compare-wrap, .compare-wrap');
+    if (!scroller) return;
+    const dismissGuide = () => host.classList.add('has-interacted');
+    scroller.addEventListener('touchstart', dismissGuide, { passive: true, once: true });
+    scroller.addEventListener('pointerdown', dismissGuide, { passive: true, once: true });
+    scroller.addEventListener('wheel', dismissGuide, { passive: true, once: true });
+    scroller.addEventListener('scroll', dismissGuide, { passive: true, once: true });
+  });
 
   const excluded = '.proof-band, .step-system, .time-impact, .media-sources';
   const revealGroups = [
