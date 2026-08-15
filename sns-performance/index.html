@@ -200,6 +200,41 @@
 @media(max-width:767px){#mdj .hero-dashboard{min-height:390px;padding:14px;transform:none}#mdj .dash-kpi{padding:10px}.dash-kpi b{font-size:15px}#mdj .dash-chart{height:125px}.dash-bottom{grid-template-columns:1fr}.signal-card{display:none}.dash-float{display:none}#mdj .conversion-map{padding:64px 0}.conversion-head{text-align:left}.conversion-flow{grid-template-columns:1fr;gap:12px}.conversion-node{min-height:0}.flow-arrow{width:2px;height:28px;margin:auto}.flow-arrow::after{right:-5px;top:auto;bottom:-1px;border-top:9px solid #ff5766;border-inline:6px solid transparent;border-bottom:0}}
 @media(prefers-reduced-motion:reduce){#mdj .dash-float{animation:none}}
 </style>
+<style>
+/* Art direction refresh: editorial performance lab */
+#mdj{--paper:#fffdfb;--ink:#222;--acid:#f2ff4b}
+#mdj header{position:relative;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px)}
+#mdj .hero{min-height:auto;padding:28px 0 52px;background:var(--paper)}
+#mdj .hero-grid{position:relative;grid-template-columns:.96fr 1.04fr;gap:54px}
+#mdj .hero-grid::before{content:"01 / PERFORMANCE SIGNAL";position:absolute;left:-72px;top:36px;color:#aaa;font-size:10px;font-weight:900;letter-spacing:.18em;writing-mode:vertical-rl}
+#mdj .hero-copy{position:relative;z-index:3;padding:12px 0 10px 28px}
+#mdj .hero-copy::before{height:100%;background:var(--赤)}
+#mdj .hero-product-name{font-size:clamp(56px,4.7vw,72px);letter-spacing:-.035em}
+#mdj .audience-chip{border:0;border-radius:0;background:var(--acid);box-shadow:none;transform:rotate(-1deg)}
+#mdj .audience-chip::before{background:#222;box-shadow:none}
+#mdj .hero-copy h1.hero-benefit{margin-top:10px;color:var(--ink);font-size:clamp(44px,3.7vw,56px);line-height:1.12}
+#mdj .hero-copy h1.hero-benefit em{position:relative;color:var(--赤)}
+#mdj .hero-copy h1.hero-benefit em::after{content:"";position:absolute;left:0;bottom:-8px;width:112px;height:8px;background:var(--acid);z-index:-1}
+#mdj .hero-lead{max-width:570px;border-top:1px solid #ddd;padding-top:21px}
+#mdj .buttons .main{position:relative;overflow:hidden}.buttons .main::after{content:"→";margin-left:16px}.buttons .sub::after{content:"↗";margin-left:14px}
+#mdj .hero-visual{position:relative;margin-top:8px}
+#mdj .hero-visual::after{content:"BUZZ ≠ BUSINESS";position:absolute;z-index:-2;right:-62px;top:-62px;color:#eee4e5;font-size:70px;font-weight:900;line-height:.84;letter-spacing:-.08em;transform:rotate(90deg);transform-origin:right top;white-space:nowrap}
+#mdj .hero-dashboard{border-radius:4px;transform:rotate(2.4deg);box-shadow:22px 26px 0 var(--赤),0 40px 90px rgba(43,19,23,.18)}
+#mdj .hero-dashboard::after{content:"ANALYZE / DECIDE / CREATE";position:absolute;left:22px;bottom:-42px;color:#333;font-size:10px;font-weight:900;letter-spacing:.2em}
+#mdj .dash-chart{border-radius:4px}.dash-kpi,.signal-card,.creative-card{border-radius:4px}
+#mdj .signal-strip{transform:rotate(-.45deg);margin:-9px -10px 0;width:calc(100% + 20px);position:relative;z-index:5}
+#mdj .proof-band{padding-top:45px}
+#mdj .conversion-map{border-top:12px solid var(--acid)}
+#mdj .conversion-node{border-radius:3px}.conversion-node::before{content:"";position:absolute;left:0;top:0;width:34px;height:5px;background:var(--acid)}.conversion-node.core-node::before{background:#fff}
+#mdj .step-system .heading{position:relative;text-align:left;padding-left:145px}.step-system .heading::before{content:"HOW IT WORKS";position:absolute;left:0;top:7px;color:#c91328;font-size:11px;font-weight:900;letter-spacing:.18em}.step-system .heading::after{content:"03";position:absolute;right:0;top:-52px;color:#eee;font-size:128px;font-weight:900;line-height:1;z-index:-1}
+#mdj .step-grid{counter-reset:steps;gap:0;border-top:1px solid #bbb}.step-card{counter-increment:steps;border:0;border-right:1px solid #bbb;border-radius:0;box-shadow:none;padding-top:38px}.step-card:last-child{border-right:0}.step-card:hover{transform:none!important;background:#fffaf9}.step-label{display:none}.step-card::before{content:"0" counter(steps);display:block;margin-bottom:20px;color:#c91328;font-size:14px;font-weight:900;letter-spacing:.15em}
+#mdj .pain .heading{text-align:left;display:grid;grid-template-columns:.65fr 1.35fr;align-items:end;gap:50px}.pain .heading .jp{align-self:start;padding-top:12px}.pain .heading h2{margin:0;font-size:clamp(36px,4vw,56px);letter-spacing:-.05em}
+#mdj .pain-grid{gap:0;border:1px solid #ccc}.pain-card{min-height:290px;border:0;border-right:1px solid #ccc;border-radius:0;box-shadow:none}.pain-card:last-child{border-right:0}.pain-card:nth-child(2){transform:none;background:#282828;color:#fff}.pain-card:nth-child(2) p{color:#ccc}.pain-card:nth-child(2) .num{color:#ff6874}
+#mdj .media-heading{text-align:left;display:grid;grid-template-columns:.55fr 1.45fr;align-items:start}.media-heading .tag{margin-top:14px}.media-heading h2{margin:0;font-size:clamp(40px,4vw,58px)}
+#mdj .mid-cta-box{border-radius:3px;box-shadow:18px 18px 0 #222}.mid-cta-label{border-radius:0;background:var(--acid);color:#222}
+#mdj .final{position:relative;overflow:hidden;background:#222}.final::after{content:"MOVE";position:absolute;right:-20px;bottom:-50px;color:rgba(255,255,255,.05);font-size:190px;font-weight:900;line-height:1}.final-actions a:first-child{background:var(--acid);color:#222}
+@media(max-width:767px){#mdj .hero{min-height:0;padding:34px 0 50px}#mdj .hero-grid{grid-template-columns:1fr;gap:18px}#mdj .hero-grid::before{display:none}#mdj .hero-copy{padding-left:18px}#mdj .hero-copy h1.hero-benefit{font-size:34px;line-height:1.2}#mdj .hero-copy h1.hero-benefit em::after{height:6px;bottom:-3px}#mdj .hero-visual{width:100%;margin-top:42px;transform:none!important}#mdj .hero-visual::after{display:none}#mdj .hero-dashboard{width:100%;transform:none;box-shadow:8px 10px 0 var(--赤),0 25px 50px rgba(43,19,23,.12)}#mdj .signal-strip{transform:none;margin-top:12px;width:100%}.step-system .heading{padding-left:0}.step-system .heading::before{position:static;display:block;margin-bottom:13px}.step-system .heading::after{font-size:90px;top:-24px}.step-grid{border:1px solid #bbb}.step-card{border-right:0;border-bottom:1px solid #bbb}.step-card:last-child{border-bottom:0}#mdj .pain .heading,#mdj .media-heading{display:block}.pain .heading .jp{margin-bottom:14px}.pain-grid{grid-template-columns:1fr}.pain-card{min-height:0;border-right:0;border-bottom:1px solid #ccc}.pain-card:last-child{border-bottom:0}#mdj .mid-cta-box{box-shadow:8px 8px 0 #222}}
+</style>
 </head>
 <body>
 <div id="mdj">
@@ -228,8 +263,8 @@
 <h1 class="hero-benefit"><span>バズで終わらせない。</span><em>売上につながる理由を、残す。</em></h1>
 <p class="hero-lead">再生数やエンゲージメントの先にある「なぜ動いたか」を、広告・サイト・購入データまで横断して分析。勝ち文脈を、次の広告クリエイティブへつなげます。</p>
 <div class="buttons">
-<a class="main" href="https://materialdigital.jp/common_document_request/">資料を見てみる</a>
-<a class="sub" href="https://materialdigital.jp/common_contact/">無料相談してみる</a>
+<a class="main" href="https://materialdigital.jp/common_document_request/">資料で分析例を見る</a>
+<a class="sub" href="https://materialdigital.jp/common_contact/">自社施策を相談する</a>
 </div>
 </div>
 <div class="hero-visual">
